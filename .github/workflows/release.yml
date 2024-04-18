@@ -1,4 +1,5 @@
 name: Build and Publish Python Wheel
+p
 
 on:
   push:
@@ -25,6 +26,8 @@ jobs:
 
     - name: Publish release
       uses: softprops/action-gh-release@v1
+      permissions:
+        contents: write
       with:
         files: dist/*.whl
         token: ${{ secrets.GITHUB_TOKEN }}
