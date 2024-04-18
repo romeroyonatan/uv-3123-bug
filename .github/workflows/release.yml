@@ -1,5 +1,4 @@
 name: Build and Publish Python Wheel
-p
 
 on:
   push:
