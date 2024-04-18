@@ -32,7 +32,7 @@ Issues = "https://github.com/unknown/hatch-demo/issues"
 Source = "https://github.com/unknown/hatch-demo"
 
 [tool.hatch.version]
-path = "src/hatch_demo/__about__.py"
+path = "src/uv_3123_bug/__about__.py"
 
 [tool.hatch.envs.default]
 dependencies = [
@@ -59,18 +59,18 @@ dependencies = [
   "mypy>=1.0.0",
 ]
 [tool.hatch.envs.types.scripts]
-check = "mypy --install-types --non-interactive {args:src/hatch_demo tests}"
+check = "mypy --install-types --non-interactive {args:src/uv_3123_bug tests}"
 
 [tool.coverage.run]
-source_pkgs = ["hatch_demo", "tests"]
+source_pkgs = ["uv_3123_bug", "tests"]
 branch = true
 parallel = true
 omit = [
-  "src/hatch_demo/__about__.py",
+  "src/uv_3123_bug/__about__.py",
 ]
 
 [tool.coverage.paths]
-hatch_demo = ["src/hatch_demo", "*/hatch-demo/src/hatch_demo"]
+uv_3123_bug = ["src/uv_3123_bug", "*/hatch-demo/src/uv_3123_bug"]
 tests = ["tests", "*/hatch-demo/tests"]
 
 [tool.coverage.report]
